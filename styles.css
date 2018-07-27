@@ -306,6 +306,7 @@ hr {
         font-size: 12px;
     }
     .content-container .input-container {
+        display: none;
         border-top: 2px solid #EDEDED;
         border-left: 0;
         border-right: 0;
@@ -332,5 +333,11 @@ hr {
         transform: translateY(-50%);
         display: block;
         border: 2px solid #EDEDED;
+    }
+}
+
+@media screen and (min-height: 570px) {
+    .content-container .input-container {
+        display: block;
     }
 }
