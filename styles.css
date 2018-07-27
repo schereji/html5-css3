@@ -1,0 +1,336 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+main {
+    padding: 0 7px;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+header {
+    border-bottom: 2px solid #D5D5D5;
+    box-shadow: 0 1px #E5E5E6;
+    position: relative;
+    padding: 0 15px;
+}
+header h1 {
+    font-size: 20px;
+    width: 85%;
+    font-weight: lighter;
+    display: inline-block;
+}
+header .logo-container {
+    display: none;
+    background-color: #BD235D;
+}
+header .menu-icon-container {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: auto;
+    display: inline-block;
+    width: 15%;
+    right: 0;
+}
+header .menu-icon-container div {
+    width: 35px;
+    height: 5px;
+    background-color: #4D4D4D;
+    margin: 6px auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+aside {
+    display: none;
+    background-color: #333333;
+}
+.logo-background {
+    display: none;
+}
+.content-container h2 {
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+hr {
+    opacity: .4;
+    width: 95%;
+    margin-top: 16px;
+}
+.content-container .subtext {
+    font-style: italic;
+    font-size: 16px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: lighter;
+}
+.content-container .body .first-letter {
+    font-size: 40px;
+    padding-top: 8px;
+    padding-right: 3px;
+    float: left;
+    line-height: 25px;
+}
+.content-container .image-container {
+    margin: 20px auto 10px;
+}
+.content-container .image-container .image {
+    background-color: #AAAAAA;
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+.content-container .image-container .caption {
+    font-size: 14px;
+    text-align: center;
+    font-weight: lighter;
+    font-style: italic;
+    margin: 4px 0;
+}
+.input-container {
+    border: 2px solid #EDEDED;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px auto;
+}
+.input-container input[type='text'] {
+    opacity: .4;
+    border: 0;
+    outline: 0;
+    color: #A8A8A8;
+    font-size: 16px;
+}
+.card-container .card {
+    font-weight: normal;
+    background-color: #F1F1F2;
+    border: 1px solid #E1E1E2;
+    padding: 5px;
+    margin: 10px auto;
+    color: #333333;
+}
+.container {
+    display: none;
+}
+@media screen and (min-width: 640px) {
+    html,
+    body {
+        counter-reset: section;
+    }
+    header {
+        height: 50px;
+        padding: 0;
+    }
+    header .logo-background {
+        display: inline-block;
+        width: 20%;
+        max-width: 70px;
+        height: 100%;
+    }
+    header h1 {
+        width: 70%;
+        padding-left: 10px;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 50px;
+        height: 100%;
+        margin: 0;
+    }
+    header .menu-icon-container {
+        width: 7%;
+    }
+    aside {
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 63px;
+        height: 100%;
+        z-index: 999999;
+    }
+    aside .logo-container {
+        margin-bottom: 15px;
+    }
+    aside .logo-container img {
+        display: block;
+        margin: 0 auto;
+    }
+    aside .thumbnail-container {
+        height: 70px;
+        max-width: inherit;
+        width: 100%;
+        margin: 0 auto 3px;
+    }
+    aside .thumbnail-container .active {
+        width: 1px;
+        height: 1px;
+        position: relative;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        position: absolute;
+        left: -1px;
+        margin-top: 17px;
+        box-shadow: 0 0 5px 5px #BE235D;
+    }
+    aside .thumbnail-container .thumbnail {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        width: 39px;
+        height: 39px;
+        background-color: #f0f0f1;
+        margin: 0 auto 3px auto;
+        display: block;
+    }
+    aside .thumbnail-container:after {
+        display: block;
+        width: 100%;
+        counter-increment: section;
+        content: "⌘ " counter(section);
+        color: #f0f0f1;
+        text-align: center;
+        font-weight: lighter;
+        font-size: 12px;
+    }
+    .main-content {
+        margin-left: 80px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html, body {
+        max-height: 633px;
+        overflow-y: hidden;
+    }
+    header h1 {
+        padding-left: 7px;
+    }
+    header .logo-background {
+        max-width: 63px;
+    }
+    aside {
+        max-height: 633px;
+    }
+    .main-content {
+        height: 100%;
+        margin-left: 63px;
+        padding-left: 0;
+        position: relative;
+    }
+    /*Left Pane: Card Container*/
+
+    .card-container {
+        height: 100%;
+        width: 35%;
+        max-width: 350px;
+        float: left;
+    }
+    .card-container .card {
+        margin: 0;
+        height: 66px;
+    }
+    .card-container .card:last-of-type {
+        height: 20px;
+        overflow: hidden;
+    }
+    .card-container .card h2 {
+        margin: 0 0 5px 0;
+        font-size: 13px;
+    }
+    .card-container .card p {
+        width: 100%;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    /*Right Pane: Content Container*/
+    .content-container {
+        float: right;
+        width: 65%;
+        height: 100%;
+        max-height: 700px;
+        display: block;
+        position: relative;
+    }
+    .content-container p,
+    .content-container h2 {
+        padding: 0 7px 0 15px;
+    }
+    .content-container h2 {
+        text-align: left;
+        font-weight: bold;
+        font-size: 17px;
+        padding-top: 10px;
+    }
+    .content-container .subtext {
+        text-align: left;
+        margin: 0;
+        font-size: 14px;
+    }
+    .content-container hr {
+        margin-top: 10px;
+    }
+    .content-container .body {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    .content-container .body .first-letter {
+        font-size: 35px;
+        padding-top: 5px;
+        padding-right: 3px;
+        float: left;
+        line-height: 25px;
+    }
+    .content-container .image-container .image {
+        width: 60%;
+        max-height: 160px;
+        max-width: 900px;
+    }
+    .content-container .image-container .caption {
+        font-size: 12px;
+    }
+    .content-container .input-container {
+        border-top: 2px solid #EDEDED;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        height: 70px;
+        width: 100%;
+        position: absolute;
+        bottom: 48px;
+        margin: 0 auto;
+    }
+    .content-container .input-container input[type="text"] {
+        width: 95%;
+        padding-left: 3px;
+        height: 40%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        display: block;
+        border: 2px solid #EDEDED;
+    }
+}
