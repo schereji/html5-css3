@@ -336,7 +336,7 @@ hr {
     }
 }
 
-@media screen and (min-height: 570px) {
+@media screen and (min-height: 585px) {
     .content-container .input-container {
         display: block;
     }
